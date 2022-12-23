@@ -1,0 +1,22 @@
+uuid: dc46c10d-8ec3-4bbe-b8c5-fdfa7bee67bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smash_lite
+_core:
+  default_config_hash: fh3nqtBl7LDBnDNUfD_otT4hFh2B7kJXrDBOojjEuxE
+id: smash_lite_breadcrumbs
+theme: smash_lite
+region: content
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

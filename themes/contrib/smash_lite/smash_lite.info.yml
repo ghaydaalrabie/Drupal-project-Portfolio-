@@ -1,0 +1,20 @@
+name: Smash Lite
+type: theme
+description: 'A theme Smash Lite designed and developed by Harsh panchal.'
+core_version_requirement: ^8 || ^9
+libraries:
+  - smash_lite/global-styling
+base theme: stable
+regions:
+  site_logo: 'Site logo'
+  navigation: 'Main Navigation'
+  header_search: 'Header search'
+  content: 'Content'
+  footer_first: 'Footer first'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer third'
+
+# Information added by Drupal.org packaging script on 2022-08-24
+version: '1.0.0'
+project: 'smash_lite'
+datestamp: 1661335229

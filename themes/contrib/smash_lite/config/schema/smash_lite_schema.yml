@@ -1,0 +1,5 @@
+# Required to validate default theme settings.
+
+smash_lite.settings:
+  type: theme_settings
+  label: 'smash_lite settings'

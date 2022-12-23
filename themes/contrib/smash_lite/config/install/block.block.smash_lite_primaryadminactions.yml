@@ -1,0 +1,18 @@
+uuid: 54d68672-df06-4cba-9636-b9c63cb7b90c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - smash_lite
+id: smash_lite_primaryadminactions
+theme: smash_lite
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

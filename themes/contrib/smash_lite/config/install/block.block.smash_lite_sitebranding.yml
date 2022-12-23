@@ -1,0 +1,23 @@
+uuid: 223c70f1-3740-408b-9d22-36c7b5995244
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smash_lite
+id: smash_lite_sitebranding
+theme: smash_lite
+region: site_logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

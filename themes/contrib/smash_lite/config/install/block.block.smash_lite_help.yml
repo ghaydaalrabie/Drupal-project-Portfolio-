@@ -1,0 +1,20 @@
+uuid: 2f6ff74a-6e7f-4095-ae1f-005afdb5946a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - smash_lite
+id: smash_lite_help
+theme: smash_lite
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: visible
+  provider: help
+visibility: {  }

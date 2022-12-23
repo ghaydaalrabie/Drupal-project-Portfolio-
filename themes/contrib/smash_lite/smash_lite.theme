@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Implements().
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements theme_preprocess_page().
+ */
+function smash_lite_preprocess_page(&$variables) {
+  $variables['footer_copyright'] = theme_get_setting('footer_copyright');
+  $variables['show_scroller_details'] = theme_get_setting('body_details');
+  $variables['arrow_up'] = theme_get_setting('arrow_up');
+
+  $variables['slideshow_display'] = theme_get_setting('slideshow_display');
+  $slider = [];
+  for ($i = 1; $i <= 3; $i++) {
+    $slider[$i] = [
+      'slide_head' => theme_get_setting('slide' . $i . '_head'),
+      'slide_desc' => theme_get_setting('slide' . $i . '_desc'),
+      'slide_url' => theme_get_setting('slide' . $i . '_url'),
+      'slide_link_text' => theme_get_setting('slide' . $i . '_link_text'),
+    ];
+
+  }
+  $variables['slide'] = $slider;
+
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['instagram_url'] = theme_get_setting('instagram_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+  $variables['youtube_url'] = theme_get_setting('youtube_url');
+  $variables['vimeo_url'] = theme_get_setting('vimeo_url');
+  $variables['telegram_url'] = theme_get_setting('telegram_url');
+  $variables['whatsapp_url'] = theme_get_setting('whatsapp_url');
+  $variables['github_url'] = theme_get_setting('github_url');
+
+  $variables['show_contact_details'] = theme_get_setting('show_contact_details');
+  $variables['footer_contact'] = theme_get_setting('footer_contact');
+  $variables['location'] = theme_get_setting('location');
+  $variables['phone'] = theme_get_setting('phone');
+  $variables['emails'] = theme_get_setting('emails');
+
+  // Footer first details.
+  $variables['show_footer_first_details'] = theme_get_setting('show_footer_first_details');
+  $variables['footer_text'] = theme_get_setting('footer_text');
+  $fid = theme_get_setting("footer_image", "smash_lite");
+  if (!empty($fid)) {
+    $file = File::load($fid[0]);
+    $uri = $file->getFileUri();
+    $image_path = file_create_url($uri);
+  }
+  else {
+    $image_path = base_path() . $variables['directory'] . '/images/logo.svg';
+  }
+  $variables['footer_image'] = $image_path;
+
+  // Header image.
+  $variables['show_header_image_details'] = theme_get_setting('show_header_image_details');
+
+  $fid = theme_get_setting("header_image", "smash_lite");
+  if (!empty($fid)) {
+    $file = File::load($fid[0]);
+    $uri = $file->getFileUri();
+    $image_path = file_create_url($uri);
+  }
+  else {
+    $image_path = base_path() . $variables['directory'] . '/images/slider.gif';
+  }
+  $variables['header_image'] = $image_path;
+
+}
+
+/**
+ * Smash lite settings form submit.
+ */
+function smash_lite_settings_form_submit(&$form, FormStateInterface $form_state) {
+  \Drupal::currentUser();
+  $form_state->getValues();
+}

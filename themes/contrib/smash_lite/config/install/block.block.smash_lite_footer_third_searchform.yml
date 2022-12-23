@@ -1,0 +1,21 @@
+uuid: 5a90502a-cd1f-46dd-9f56-1721618c8734
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - smash_lite
+id: smash_lite_footer_third_searchform
+theme: smash_lite
+region: footer_third
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Footer third'
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility: {  }

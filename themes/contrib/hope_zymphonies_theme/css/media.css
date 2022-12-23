@@ -1,0 +1,91 @@
+@media (min-width: 576px) {
+	.container {
+		max-width: 570px;
+	}
+}
+
+@media (min-width: 767px) {
+	.main-container {
+		padding: 40px;
+	}
+	.main-content,
+	.features,
+	.footer {
+		margin: 40px 0;
+	}
+	.container {
+		max-width: 1140px;
+	}
+	.main-container .content-wrapper {
+		background: #f9f9f9;
+	}
+	.navbar-toggle {
+		display: none;
+	}
+	.main-menu-toggle {
+		display: block !important;
+	}
+	.menu-base-theme {
+		padding: 60px 0;
+	}
+	.expand-menu:after {
+		background: none;
+		z-index: -1;
+	}
+	.expand-menu .left-wrapper {
+		left: -300px;
+	}
+	.expand-menu .content-wrapper {
+		padding: 0;
+		width: 100%;
+	}
+	.expand-menu .navbar-toggle .fas {
+		color: #000;
+	}
+	.navbar-toggle .fas {
+		color: #000;
+	}
+	.user-logged-in .main-header {
+		position: relative;
+	}
+	.flexslider .slider-caption {
+		display: block;
+		bottom: 8%;
+		left: 8%;
+		width: 60%;
+		font-size: 1em;
+		top: auto;
+	}
+	.flexslider .flex-direction-nav {
+		display: block;
+		margin-top: -24px;
+	}
+	.clients .region ul li {
+		width: 24%;
+	}
+	.carousel-caption p,
+	.carousel-caption h3 {
+		display: block;
+	}
+	.carousel-caption p:last-child {
+		margin: 0;
+	}
+	.carousel-caption {
+		background-color: #fff;
+		background: rgba(0, 0, 0, 0.84);
+		color: #ddd;
+		text-shadow: none;
+		padding: 20px;
+		top: 20%;
+		left: 10%;
+		bottom: auto;
+		width: 30%;
+		text-align: left;
+	}
+	.comment-wrap .author-details {
+		width: 10%;
+	}
+	.comment-wrap .author-comments {
+		width: 90%;
+	}
+}
